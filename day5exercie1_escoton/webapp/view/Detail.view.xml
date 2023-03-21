@@ -1,0 +1,9 @@
+<mvc:View controllerName="zbtp.day5exercie1f11.controller.Detail" xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m" 
+    xmlns:f="sap.ui.layout.form"
+    xmlns:l="sap.ui.layout"
+    xmlns:core="sap.ui.core" >
+    <Page id="page" title="Page2">
+        <Text id="idNameText"/>
+    </Page>
+</mvc:View>
