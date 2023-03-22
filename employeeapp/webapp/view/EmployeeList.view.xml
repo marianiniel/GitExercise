@@ -1,0 +1,58 @@
+<mvc:View controllerName="sapips.training.employeeapp.controller.EmployeeList"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns:l="sap.ui.layout"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+   	<Table id="Employee"
+    	inset="false"
+		mode="MultiSelect"
+		items="{
+			path: '/ProductCollection',
+			sorter: {
+				path: 'Name'
+			}
+		}">
+		
+		<columns>
+			<Column>
+				<Text text="Employee ID" />
+			</Column>
+			<Column>
+				<Text text="First Name" />
+			</Column>
+			<Column>
+				<Text text="Last Name" />
+			</Column>
+
+            <Column>
+				<Text text="Age" />
+			</Column>
+
+            <Column>
+				<Text text="Date of Hire" />
+			</Column>
+
+            <Column>
+				<Text text="Career Level" />
+			</Column>
+
+            <Column>
+				<Text text="Current Project" />
+			</Column>
+		</columns>
+		<items>
+			<ColumnListItem vAlign="Middle" type="Navigation">
+				<cells>
+					<Text text="{EmployeeId}" wrapping="false" />
+					<Text text="{FirstName}" wrapping="false"/>
+					<Text text="{Last Name}" />
+                    <Text text="{Age}" />
+                    <Text text="{HireDate}" />
+                    <Text text="{CareerLevel}" />
+                    <Text text="{CurrentProject}" />
+				</cells>
+			</ColumnListItem>
+		</items>
+	</Table>
+    </Page>
+</mvc:View>
