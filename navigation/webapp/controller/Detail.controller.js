@@ -1,21 +1,27 @@
 sap.ui.define([
-	"sap/ui/core/mvc/Controller",
+    "sap/ui/core/mvc/Controller",
 	"sap/ui/core/routing/History",
 	"sap/ui/core/UIComponent"
-], 
 
-function (Controller, History, UIComponent) {
-    "use strict";
+],
+    /**
+     * @param {typeof sap.ui.core.mvc.Controller} Controller
+     */
+    function (Controller,History, UIComponent) {
+        "use strict";
 
-    return Controller.extend("navigationex.controller.Detail", {
-        //Lifecycle event. Allows this._onObjectMatched to trigger when
+        return Controller.extend("navigation.controller.Detail", {
+
+            //Lifecycle event. Allows this._onObjectMatched to trigger when
 		//attachPatternMatched event happens
-		onInit: function () {
-			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-			oRouter.getRoute("Detail").attachPatternMatched(this._onObjectMatched, this);
-		},
-		
-		//When triggered, puts passed parameters in Input fields
+
+            onInit: function () {
+                var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+                oRouter.getRoute("Detail").attachPatternMatched(this._onObjectMatched, this);
+    
+            },
+
+           //When triggered, puts passed parameters in Input fields
 		//
 		//oEvent - Event instance
 		_onObjectMatched: function (oEvent) {
@@ -41,6 +47,6 @@ function (Controller, History, UIComponent) {
 				oRouter.navTo("RouteOverview");
 			}
 		}
-    });
-});
 
+        });
+    });

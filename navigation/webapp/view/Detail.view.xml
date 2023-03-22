@@ -1,7 +1,10 @@
-<mvc:View controllerName="navigationex.controller.Detail"
+<mvc:View controllerName="navigation.controller.Detail"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns="sap.m">
-    <Page id="idDetailsPage" title="{i18n>DetailTitle}" showNavButton="true" navButtonPress="onNavBack" class="sapUiResponsiveContentPadding">
+
+<App id="app">
+            <pages>
+                <Page id="idDetailsPage" title="{i18n>DetailTitle}" showNavButton="true" navButtonPress="onNavBack" class="sapUiResponsiveContentPadding">
                         <content>
                             <VBox id="idDetailsVbox">
                                 <Label id="idInput1Label" text="{i18n>Value1}" labelFor="idInput1"/>
@@ -11,5 +14,7 @@
                             </VBox>
                         </content>
                 </Page>
+            </pages>
+    </App>
 
 </mvc:View>

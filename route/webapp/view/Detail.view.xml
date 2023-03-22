@@ -1,4 +1,4 @@
-<mvc:View controllerName="route.controller.routeview"
+<mvc:View controllerName="route.controller.Detail"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns="sap.m">
       <Page id="idDetailsPage" title="{i18n>DetailTitle}" showNavButton="true" navButtonPress="onNavBack" class="sapUiResponsiveContentPadding">
