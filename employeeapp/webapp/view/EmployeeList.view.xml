@@ -1,19 +1,27 @@
 <mvc:View controllerName="sapips.training.employeeapp.controller.EmployeeList"
-    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns:mvc="sap.ui.core.mvc" 
     xmlns:l="sap.ui.layout"
+    xmlns:core="sap.ui.core"
+    displayBlock="true"
     xmlns="sap.m">
-    <Page id="page" title="{i18n>title}">
-   	<Table id="Employee"
-    	inset="false"
-		mode="MultiSelect"
-		items="{
-			path: '/ProductCollection',
-			sorter: {
-				path: 'Name'
-			}
-		}">
-		
+
+    <Table id="idEmployee"
+           items="{/Employee}" 
+           mode="MultiSelect"
+           inset="false">
+	<headerToolbar>
+			<OverflowToolbar>
+				<content>
+					<Title text="Employee" level="H2"/>
+					<ToolbarSpacer />
+                    <SearchField search="onSearch" width="17.5rem"/>
+					<Button text="Add" press="onOpenPressed"/>
+                    <Button text="Delete" press="onOpenPressed1"/>
+				</content>
+			</OverflowToolbar>
+		</headerToolbar>
 		<columns>
+        
 			<Column>
 				<Text text="Employee ID" />
 			</Column>
@@ -23,36 +31,33 @@
 			<Column>
 				<Text text="Last Name" />
 			</Column>
-
             <Column>
 				<Text text="Age" />
 			</Column>
-
             <Column>
-				<Text text="Date of Hire" />
+				<Text text="Hire Date" />
 			</Column>
-
             <Column>
 				<Text text="Career Level" />
 			</Column>
-
             <Column>
 				<Text text="Current Project" />
 			</Column>
+
 		</columns>
 		<items>
 			<ColumnListItem vAlign="Middle" type="Navigation">
 				<cells>
-					<Text text="{EmployeeId}" wrapping="false" />
-					<Text text="{FirstName}" wrapping="false"/>
-					<Text text="{Last Name}" />
+					<Text text="{EmployeeID}"  />
+					<Text text="{FirstName}" />
+					<Text text="{LastName}" />
                     <Text text="{Age}" />
-                    <Text text="{HireDate}" />
-                    <Text text="{CareerLevel}" />
+                    <Text text="{DateHire}" />
+                    <Text text="{CarrerLevel}" />
                     <Text text="{CurrentProject}" />
 				</cells>
 			</ColumnListItem>
 		</items>
 	</Table>
-    </Page>
+  
 </mvc:View>

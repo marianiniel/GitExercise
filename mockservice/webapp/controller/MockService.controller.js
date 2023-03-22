@@ -12,6 +12,7 @@ sap.ui.define([
             formatter: formatter,
             onInit: function () {
 
-            }
+            },
+
         });
     });
