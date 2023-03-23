@@ -1,0 +1,37 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.employeeRecords.controller.MasterPage1" xmlns="sap.m">
+    <Page title="Employee Records" showHeader="true" showFooter="true" showNavButton="false" navButtonPress="_onPageNavButtonPress">
+        <content>
+            <SearchField placeholder="Search" showSearchButton="true" visible="true" width="100%" search="_onSearchFieldSearch"/>
+            <List id="sap_List_Page_0-content-sap_m_ObjectList-1" mode="SingleSelectMaster" width="100%" headerText="Header" footerText="" backgroundDesign="Solid" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true" visible="true" itemPress="_onObjectListItemPress" items="{path:'/EmployeeRecordsSet', templateShareable:true}">
+                <infoToolbar/>
+                <headerToolbar>
+                    <Toolbar enabled="true" visible="true" width="" design="Solid">
+                        <content/>
+                    </Toolbar>
+                </headerToolbar>
+                <items>
+                    <ObjectListItem intro="{ID}" title="{EmployeeNumber}" number="{FullName}" numberUnit="" numberState="None" type="Active" selected="false" showMarkers="false">
+                        <attributes>
+                            <ObjectAttribute title="" text="Employee #:" active="false" visible="true"/>
+                            <ObjectAttribute text="Career Level" active="false" visible="true"/>
+                        </attributes>
+                        <firstStatus>
+                            <ObjectStatus text="{EmployeeNumber}" state="None" visible="true"/>
+                        </firstStatus>
+                        <secondStatus>
+                            <ObjectStatus text="{CareerLevel}" state="None" visible="true"/>
+                        </secondStatus>
+                    </ObjectListItem>
+                </items>
+            </List>
+        </content>
+        <footer>
+            <OverflowToolbar width="100%" height="46px" design="Auto" enabled="true" visible="true">
+                <content>
+                    <Button text="Add New Records" type="Default" icon="sap-icon://add" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="_onButtonPress"/>
+                </content>
+            </OverflowToolbar>
+        </footer>
+        <headerContent/>
+    </Page>
+</mvc:View>

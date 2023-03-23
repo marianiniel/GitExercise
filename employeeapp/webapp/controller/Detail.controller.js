@@ -3,19 +3,20 @@ sap.ui.define([
     "sap/ui/model/Filter",
 	"sap/ui/model/FilterOperator",
 	'sap/ui/model/Sorter',
-	'sap/m/MessageBox',
-    "sap/ui/core/UIComponent",
-    "sap/ui/model/json/JSONModel"
+	'sap/m/MessageBox'
 ],
     /**
      * @param {typeof sap.ui.core.mvc.Controller} Controller
      */
-    function (Controller,Filter,FilterOperator,Sorter,MessageBox,UIComponent,JSONModel) {
+    function (Controller,Filter,FilterOperator,Sorter,MessageBox) {
         "use strict";
 
-        return Controller.extend("sapips.training.employeeapp.controller.EmployeeList", {
+        return Controller.extend("sapips.training.employeeapp.controller.Detail", {
             onInit: function () {
                 this.oRouter = this.getOwnerComponent().getRouter();
+			    this.oModel = this.getOwnerComponent().getModel();
+
+			this.oRouter.getRoute("Detail").attachPatternMatched(this._onEmployeeMatched, this);
             },
             onSearch: function (oEvent) {
                 var oTableSearchState = [],
@@ -30,20 +31,17 @@ sap.ui.define([
             },
 
             onListItemPress: function (oEvent) {
-                
-                var oPath = oEvent.getSource().getBindingContext().getPath();
-                var EmployeeID = oPath.split("/").slice(-1).pop();
-                this.oRouter.navTo("Detail", {EmployeeID: EmployeeID});
-            },
-
-            onCreate: function () {
                 var oView = this.getView(),
-                    oResourceBundle = oView.getModel("i18n").getResourceBundle();
-                this.oRouter.navTo("Add");
-
-
-                
+                    oResourceBundle = oView.getModel("i18n").getResourceBundle(),
+                    oInput1 = oView.byId("idEmployee");
+                    var oRouter = UIComponent.getRouterFor(this);
+                oRouter.navTo("Detail");
+            },
+            _onEmployeeMatched: function (oEvent) {
+                this._EmployeeID = oEvent.getParameter("arguments").EmployeeID || this._EmployeeID || "0";
+                this.getView().bindElement({
+                    path: "/" + this._EmployeeID
+                });
             }
-
         });
     });

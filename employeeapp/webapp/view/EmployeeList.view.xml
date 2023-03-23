@@ -6,7 +6,8 @@
     xmlns="sap.m">
 
     <Table id="idEmployee"
-           items="{/Employee}" 
+           items= "{ path: '/Employee',
+		   		   parameters : { expand: 'Skill' } }"
            mode="MultiSelect"
            inset="false">
 	<headerToolbar>
@@ -15,7 +16,7 @@
 					<Title text="Employee" level="H2"/>
 					<ToolbarSpacer />
                     <SearchField search="onSearch" width="17.5rem"/>
-					<Button text="Add" press="onOpenPressed"/>
+					<Button text="Add" press="onCreate"/>
                     <Button text="Delete" press="onOpenPressed1"/>
 				</content>
 			</OverflowToolbar>
@@ -46,14 +47,14 @@
 
 		</columns>
 		<items>
-			<ColumnListItem vAlign="Middle" type="Navigation">
+			<ColumnListItem vAlign="Middle" type="Navigation" press="onListItemPress" >
 				<cells>
 					<Text text="{EmployeeID}"  />
 					<Text text="{FirstName}" />
 					<Text text="{LastName}" />
                     <Text text="{Age}" />
                     <Text text="{DateHire}" />
-                    <Text text="{CarrerLevel}" />
+                    <Text text="{CareerLevel}" />
                     <Text text="{CurrentProject}" />
 				</cells>
 			</ColumnListItem>

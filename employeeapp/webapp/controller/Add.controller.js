@@ -3,19 +3,17 @@ sap.ui.define([
     "sap/ui/model/Filter",
 	"sap/ui/model/FilterOperator",
 	'sap/ui/model/Sorter',
-	'sap/m/MessageBox',
-    "sap/ui/core/UIComponent",
-    "sap/ui/model/json/JSONModel"
+	'sap/m/MessageBox'
 ],
     /**
      * @param {typeof sap.ui.core.mvc.Controller} Controller
      */
-    function (Controller,Filter,FilterOperator,Sorter,MessageBox,UIComponent,JSONModel) {
+    function (Controller,Filter,FilterOperator,Sorter,MessageBox) {
         "use strict";
 
-        return Controller.extend("sapips.training.employeeapp.controller.EmployeeList", {
+        return Controller.extend("sapips.training.employeeapp.controller.Add", {
             onInit: function () {
-                this.oRouter = this.getOwnerComponent().getRouter();
+
             },
             onSearch: function (oEvent) {
                 var oTableSearchState = [],
@@ -30,19 +28,11 @@ sap.ui.define([
             },
 
             onListItemPress: function (oEvent) {
-                
-                var oPath = oEvent.getSource().getBindingContext().getPath();
-                var EmployeeID = oPath.split("/").slice(-1).pop();
-                this.oRouter.navTo("Detail", {EmployeeID: EmployeeID});
-            },
-
-            onCreate: function () {
                 var oView = this.getView(),
-                    oResourceBundle = oView.getModel("i18n").getResourceBundle();
-                this.oRouter.navTo("Add");
-
-
-                
+                    oResourceBundle = oView.getModel("i18n").getResourceBundle(),
+                    oInput1 = oView.byId("idEmployee");
+                    var oRouter = UIComponent.getRouterFor(this);
+                oRouter.navTo("Detail");
             }
 
         });

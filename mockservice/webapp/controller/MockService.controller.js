@@ -14,5 +14,15 @@ sap.ui.define([
 
             },
 
+            onCreate: function(oEvent){
+                var oModel = this.getOwnerComponent().getModel("ProductsModel")
+                var oData = {
+                    ProductID: 999,
+                    ProductName : "myProduct"
+                };
+                oModel.create("/Products", 
+                oData,{});
+            }
+
         });
     });

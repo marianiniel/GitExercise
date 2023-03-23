@@ -1,0 +1,180 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.employeeRecords.controller.DetailPage2" xmlns="sap.m" xmlns:form="sap.ui.layout.form" xmlns:core="sap.ui.core">
+    <Page showHeader="true" title="Employee Information" showFooter="true" showNavButton="false">
+        <content>
+            <form:Form width="100%" editable="true" visible="true">
+                <form:title>
+                    <core:Title text="Personal Information" level="Auto"/>
+                </form:title>
+                <form:formContainers>
+                    <form:FormContainer visible="true">
+                        <form:formElements>
+                            <form:FormElement visible="true">
+                                <form:label>
+                                    <Label text="First Name" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                </form:label>
+                                <form:fields>
+                                    <Input id="sap_Responsive_Page_0-content-build_simple_form_Form-1679291279232-formContainers-build_simple_form_FormContainer-1-formElements-build_simple_form_FormElement-1-fields-sap_m_Input-1" type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" required="true" valueStateText="Invalid entry" maxLength="0"/>
+                                </form:fields>
+                            </form:FormElement>
+                            <form:FormElement visible="true">
+                                <form:label>
+                                    <Label text="Last Name" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                </form:label>
+                                <form:fields>
+                                    <Input id="sap_Responsive_Page_0-content-build_simple_form_Form-1679291279232-formContainers-build_simple_form_FormContainer-1-formElements-build_simple_form_FormElement-2-fields-sap_m_Input-1" type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" required="true" valueStateText="Invalid entry" maxLength="0"/>
+                                </form:fields>
+                            </form:FormElement>
+                            <form:FormElement visible="true">
+                                <form:label>
+                                    <Label text="Middle Name" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                </form:label>
+                                <form:fields>
+                                    <Input type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" required="false" valueStateText="Invalid entry" maxLength="0"/>
+                                </form:fields>
+                            </form:FormElement>
+                            <form:FormElement visible="true">
+                                <form:label>
+                                    <Label text="Birth date" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                </form:label>
+                                <form:fields>
+                                    <DatePicker id="sap_Responsive_Page_0-content-build_simple_form_Form-1679291279232-formContainers-build_simple_form_FormContainer-1-formElements-build_simple_form_FormElement-4-fields-sap_m_DatePicker-1" width="auto" displayFormat="medium" required="true" valueStateText="Invalid entry" enabled="true" visible="true" valueFormat="yyyyMMdd"/>
+                                </form:fields>
+                            </form:FormElement>
+                            <form:FormElement visible="true">
+                                <form:label>
+                                    <Label text="Gender" design="Standard" width="100%" required="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                </form:label>
+                                <form:fields>
+                                    <ComboBox placeholder="Choose from list below" editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%">
+                                        <items>
+                                            <core:Item text="Female" enabled="true" key="Female"/>
+                                            <core:Item text="Male" enabled="true" key="Male"/>
+                                            <core:Item text="LGBT" enabled="true" key="LGBT"/>
+                                        </items>
+                                    </ComboBox>
+                                </form:fields>
+                            </form:FormElement>
+                            <form:FormElement visible="true">
+                                <form:label>
+                                    <Label text="Civil Status" design="Standard" width="100%" required="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                </form:label>
+                                <form:fields>
+                                    <ComboBox placeholder="Choose from list below" editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%">
+                                        <items>
+                                            <core:Item text="Single" enabled="true" key="Single"/>
+                                            <core:Item text="Married" enabled="true" key="Married"/>
+                                            <core:Item text="Divorced" enabled="true" key="Divorced"/>
+                                            <core:Item text="Widow" enabled="true" key="Widow"/>
+                                        </items>
+                                    </ComboBox>
+                                </form:fields>
+                            </form:FormElement>
+                        </form:formElements>
+                        <form:title/>
+                    </form:FormContainer>
+                </form:formContainers>
+                <form:layout>
+                    <form:ResponsiveGridLayout adjustLabelSpan="false" columnsL="2" labelSpanL="3" columnsM="1" labelSpanM="2" labelSpanS="12"/>
+                </form:layout>
+            </form:Form>
+            <form:Form width="100%" editable="true" visible="true">
+                <form:title>
+                    <core:Title text="Employee Information" level="Auto"/>
+                </form:title>
+                <form:formContainers>
+                    <form:FormContainer visible="true">
+                        <form:formElements>
+                            <form:FormElement visible="true">
+                                <form:label>
+                                    <Label text="Employee ID" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                </form:label>
+                                <form:fields>
+                                    <Input id="sap_Responsive_Page_0-content-build_simple_form_Form-1679291289660-formContainers-build_simple_form_FormContainer-1-formElements-build_simple_form_FormElement-1-fields-sap_m_Input-1" type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" required="true" valueStateText="Invalid entry" maxLength="0"/>
+                                </form:fields>
+                            </form:FormElement>
+                            <form:FormElement visible="true">
+                                <form:label>
+                                    <Label text="Hire date" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                </form:label>
+                                <form:fields>
+                                    <DatePicker id="sap_Responsive_Page_0-content-build_simple_form_Form-1679291289660-formContainers-build_simple_form_FormContainer-1-formElements-build_simple_form_FormElement-2-fields-sap_m_DatePicker-1" width="auto" displayFormat="medium" required="true" valueStateText="Invalid entry" enabled="true" visible="true" valueFormat="yyyyMMdd"/>
+                                </form:fields>
+                            </form:FormElement>
+                            <form:FormElement visible="true">
+                                <form:label>
+                                    <Label text="Career Level" design="Standard" width="100%" required="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                </form:label>
+                                <form:fields>
+                                    <ComboBox placeholder="Choose from list below" editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%">
+                                        <items>
+                                            <core:Item text="Level 12" enabled="true" key="Level 12"/>
+                                            <core:Item text="Level 11" enabled="true" key="Level 11"/>
+                                            <core:Item text="Level 10" enabled="true" key="Level 10"/>
+                                            <core:Item text="Level 9" enabled="true" key="Level 9"/>
+                                            <core:Item text="Level 8" enabled="true" key="Level 8"/>
+                                            <core:Item text="Level 7" enabled="true" key="Level 7"/>
+                                            <core:Item text="Level 6" enabled="true" key="Level 6"/>
+                                        </items>
+                                    </ComboBox>
+                                </form:fields>
+                            </form:FormElement>
+                            <form:FormElement visible="true">
+                                <form:label>
+                                    <Label text="Role" design="Standard" width="100%" required="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                </form:label>
+                                <form:fields>
+                                    <ComboBox placeholder="Choose from list below" editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%">
+                                        <items>
+                                            <core:Item text="Developer" enabled="true" key="Developer"/>
+                                            <core:Item text="Project Manager" enabled="true" key="Project Manager"/>
+                                            <core:Item text="Development Lead" enabled="true" key="Development Lead"/>
+                                            <core:Item text="Functional" enabled="true" key="Functional"/>
+                                        </items>
+                                    </ComboBox>
+                                </form:fields>
+                            </form:FormElement>
+                            <form:FormElement visible="true">
+                                <form:label>
+                                    <Label text="Enterprise ID" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                </form:label>
+                                <form:fields>
+                                    <Input id="sap_Responsive_Page_0-content-build_simple_form_Form-1679291289660-formContainers-build_simple_form_FormContainer-1-formElements-build_simple_form_FormElement-5-fields-sap_m_Input-1" type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" required="true" valueStateText="Invalid entry" maxLength="0"/>
+                                </form:fields>
+                            </form:FormElement>
+                            <form:FormElement visible="true">
+                                <form:label>
+                                    <Label text="Capability" design="Standard" width="100%" required="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                </form:label>
+                                <form:fields>
+                                    <ComboBox placeholder="Choose from list below" editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%">
+                                        <items>
+                                            <core:Item text="SAP" enabled="true" key="SAP"/>
+                                            <core:Item text="Saleforce" enabled="true" key="Saleforce"/>
+                                            <core:Item text="People Soft" enabled="true" key="People Soft"/>
+                                        </items>
+                                    </ComboBox>
+                                </form:fields>
+                            </form:FormElement>
+                        </form:formElements>
+                        <form:title/>
+                    </form:FormContainer>
+                </form:formContainers>
+                <form:layout>
+                    <form:ResponsiveGridLayout adjustLabelSpan="false" columnsL="2" labelSpanL="3" columnsM="1" labelSpanM="2" labelSpanS="12"/>
+                </form:layout>
+            </form:Form>
+        </content>
+        <footer>
+            <OverflowToolbar width="100%" height="46px" design="Auto" enabled="true" visible="true">
+                <content>
+                    <ToolbarSpacer width=""/>
+                    <Button text="Save" type="Emphasized" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="_onButtonPress"/>
+                    <Button text="Cancel" type="Default" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="_onButtonPress1"/>
+                </content>
+            </OverflowToolbar>
+        </footer>
+        <headerContent/>
+        <subHeader/>
+        <customHeader/>
+    </Page>
+</mvc:View>

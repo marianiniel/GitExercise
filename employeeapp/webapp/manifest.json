@@ -99,7 +99,17 @@
           "target": [
             "TargetEmployeeList"
           ]
-        }
+        },
+        {
+          "name": "Detail",
+          "pattern": "Detail/{EmployeeID}",
+          "target": ["Detail"]
+        },
+        {
+          "name": "Add",
+          "pattern": "Add",
+          "target": ["Add"]
+          }
       ],
       "targets": {
         "TargetEmployeeList": {
@@ -108,7 +118,15 @@
           "clearControlAggregation": false,
           "viewId": "EmployeeList",
           "viewName": "EmployeeList"
-        }
+        },
+        "Detail": {
+					"viewId": "Detail",
+					"viewName": "Detail"
+				},
+        "Add": {
+					"viewId": "Add",
+					"viewName": "Add"
+				}
       }
     },
     "rootView": {
